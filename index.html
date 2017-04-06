@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Rubik's Cube</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/cover.css" rel="stylesheet">
+
+    <style>
+			canvas { width: 100%; height: 80%; }
+			#canvas-container {
+				width: 100%;
+				height: 80%;
+				position: fixed;
+			  margin: auto;
+			  top: 30;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      </style>
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="jumbotron">
+          <div class="container">
+            <h2>Controls</h2>
+            <p>F/B - rotate the front or back face
+              <br>
+              U/D - rotate the up or down face
+              <br>
+              L/R - rotate the left or right face</p>
+            <p>Hold shift to rotate counterclockwise and arrow keys to spin the cube</p>
+            <p><a class="btn btn-primary btn-lg" href="#" onclick="toggleHelp()" role="button">Got it!</a></p>
+          </div>
+        </div>
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Rubik's Cube</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li><a href="#" onclick="toggleHelp();">Help!</a></li>
+                  <li><a href="#" onclick="randomize();">Shuffle</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <div id="canvas-container"></div>
+          </div>
+
+          <!--div class="mastfoot">
+          <div class="inner">
+          <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+      </div-->
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="js/three.min.js"></script>
+		<script src="js/cubicle.js"></script>
+		<!--script src="js/cube_render.js"></script-->
+    <script src="js/cubesim.js"></script>
+		<script src="js/main.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script>
+    function toggleHelp() {
+      $('.jumbotron').fadeToggle();
+      $('#info-blur').fadeToggle()
+    }
+    </script>
+
+    <div id="info-blur">
+    </div>
+  </body>
+</html>
