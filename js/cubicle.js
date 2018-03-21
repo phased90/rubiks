@@ -1,4 +1,3 @@
-//This is starting to seem more and more like a useless class
 var Cube = function() {
   this.matrix = [];
 

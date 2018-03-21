@@ -1,7 +1,7 @@
 
 /*
  *
- * File containing the Three.JS setup functions
+ * Three.JS setup functions
  *
  */
 
@@ -147,7 +147,7 @@ function tick() {
 
 tick();
 
-//Disable all buttons on the page - this isn't strictly necessary
+//Disable all buttons on the page
 function freeze() {
   var buttons = document.getElementsByTagName("button")
   for (var i in buttons) {
@@ -170,7 +170,6 @@ function randomize() {
   freeze();
 }
 
-//Starting to implement some interactive stuff
 document.addEventListener('keydown', function(event) {
   console.log("Key Event: " + event.keyCode);
   var s = event.shiftKey ? -1 : 1;
