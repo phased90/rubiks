@@ -1,0 +1,22 @@
+{
+  "name": "rubiks",
+  "version": "1.0.0",
+  "description": "browser-based rubiks cube",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phased90/rubiks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phased90/rubiks/issues"
+  },
+  "homepage": "https://github.com/phased90/rubiks#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
